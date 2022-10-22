@@ -1,4 +1,5 @@
-/* General Styles */
+/* Variables */
+/* Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,20 +12,70 @@ img {
   width: 100%; }
 
 p {
-  font-size: 15px; }
+  font-size: 15px;
+  line-height: 1.65;
+  color: #5d5f79; }
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat 3, 1fr;
+  grid-template-areas: "feature feature new" "feature feature new" "box-1 box-2 box-3";
+  grid-gap: 30px;
+  max-width: 1110px;
+  margin: auto; }
+  .grid-container .feature {
+    grid-area: feature; }
+  .grid-container .new {
+    grid-area: new; }
+  .grid-container .box-1 {
+    grid-area: box-1; }
+  .grid-container .box-2 {
+    grid-area: box-2; }
+  .grid-container .box-3 {
+    grid-area: box-3; }
+
+.grid-container .feature {
+  margin-bottom: 42px; }
+  .grid-container .feature .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; }
+  .grid-container .feature img {
+    width: 100%;
+    margin-bottom: 30px; }
+  .grid-container .feature h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #00001a;
+    line-height: 1; }
+  .grid-container .feature p {
+    margin-bottom: 2rem; }
 
 /* Aside: New */
 aside.new {
-  padding: 38px 28px;
+  padding: 32px 28px;
   margin-bottom: 42px;
-  background-color: #00001a;
-  color: #fffdfa; }
+  background-color: #00001a; }
+  aside.new h2 {
+    color: #e9ab53;
+    font-size: 2.4rem;
+    margin-bottom: 2rem; }
+  aside.new h3 {
+    color: #fffdfa;
+    font-size: 800;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem; }
+  aside.new p {
+    color: #c5c6ce;
+    margin-bottom: 2rem; }
 
 /* Boxes */
 .grid-container .box {
   max-width: 1110px;
   margin: auto;
   display: flex;
+  align-items: center;
   column-gap: 25px; }
   .grid-container .box img {
     width: 96px;
@@ -38,32 +89,5 @@ aside.new {
     font-size: 1.1rem;
     font-weight: 800;
     margin-bottom: 0.7rem; }
-  .grid-container .box p {
-    line-height: 1.7;
-    color: #5d5f79; }
-
-/* Grid Layout */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat 3, 1fr;
-  grid-template-areas: "feature feature new" "feature feature new" "box-1 box-2 box-3";
-  grid-gap: 30px;
-  max-width: 1110px;
-  margin: auto; }
-
-.feature {
-  grid-area: feature; }
-
-.new {
-  grid-area: new; }
-
-.box-1 {
-  grid-area: box-1; }
-
-.box-2 {
-  grid-area: box-2; }
-
-.box-3 {
-  grid-area: box-3; }
 
 /* For Debugging */

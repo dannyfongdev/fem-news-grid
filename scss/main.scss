@@ -1,31 +1,89 @@
-@import "variables";
+@import "variables-base";
 
-/* General Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
+  grid-template-areas:
+    "feature feature new"
+    "feature feature new"
+    "box-1 box-2 box-3";
+  grid-gap: $grid-gap;
+  max-width: $max-width;
+  margin: auto;
+
+  .feature {
+    grid-area: feature;
+  }
+
+  .new {
+    grid-area: new;
+  }
+
+  .box-1 {
+    grid-area: box-1;
+  }
+
+  .box-2 {
+    grid-area: box-2;
+  }
+
+  .box-3 {
+    grid-area: box-3;
+  }
 }
 
-body {
-  font-family: $font-stack;
-}
+// Feature
 
-img {
-  width: 100%;
-}
+.grid-container .feature {
+  margin-bottom: 42px;
 
-p {
-  font-size: 15px;
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $grid-gap;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: $neutral-color-4;
+    line-height: 1;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Aside: New */
 
 aside.new {
-  padding: 38px 28px;
+  padding: 32px 28px;
   margin-bottom: 42px;
   background-color: $neutral-color-4;
-  color: $neutral-color-1;
+
+  h2 {
+    color: $primary-color;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    color: $neutral-color-1;
+    font-size: 800;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+
+  p {
+    color: $neutral-color-2;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Boxes */
@@ -34,6 +92,7 @@ aside.new {
   max-width: $max-width;
   margin: auto;
   display: flex;
+  align-items: center;
   column-gap: 25px;
 
   img {
@@ -53,44 +112,6 @@ aside.new {
     font-weight: 800;
     margin-bottom: 0.7rem;
   }
-
-  p {
-    line-height: 1.7;
-    color: $neutral-color-3;
-  }
-}
-
-/* Grid Layout */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat (3, 1fr);
-  grid-template-areas:
-    "feature feature new"
-    "feature feature new"
-    "box-1 box-2 box-3";
-  grid-gap: $grid-gap;
-  max-width: $max-width;
-  margin: auto;
-}
-
-.feature {
-  grid-area: feature;
-}
-
-.new {
-  grid-area: new;
-}
-
-.box-1 {
-  grid-area: box-1;
-}
-
-.box-2 {
-  grid-area: box-2;
-}
-
-.box-3 {
-  grid-area: box-3;
 }
 
 /* For Debugging */
