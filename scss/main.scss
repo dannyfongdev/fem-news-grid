@@ -67,22 +67,32 @@ aside.new {
   margin-bottom: 42px;
   background-color: $neutral-color-4;
 
+  a:hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
+
   h2 {
     color: $primary-color;
     font-size: 2.4rem;
-    margin-bottom: 2rem;
   }
 
   h3 {
     color: $neutral-color-1;
     font-size: 800;
     font-size: 1.2rem;
-    margin-bottom: 0.7rem;
+    margin-top: 1.8rem;
   }
 
   p {
     color: $neutral-color-2;
+    margin-top: 0.7rem;
+  }
+
+  .line-separator {
+    border-top: 1px solid $neutral-color-3;
     margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 }
 
@@ -94,6 +104,11 @@ aside.new {
   display: flex;
   align-items: center;
   column-gap: 25px;
+
+  a:hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
 
   img {
     width: 96px;

@@ -57,18 +57,24 @@ aside.new {
   padding: 32px 28px;
   margin-bottom: 42px;
   background-color: #00001a; }
+  aside.new a:hover {
+    color: #e9ab53;
+    cursor: pointer; }
   aside.new h2 {
     color: #e9ab53;
-    font-size: 2.4rem;
-    margin-bottom: 2rem; }
+    font-size: 2.4rem; }
   aside.new h3 {
     color: #fffdfa;
     font-size: 800;
     font-size: 1.2rem;
-    margin-bottom: 0.7rem; }
+    margin-top: 1.8rem; }
   aside.new p {
     color: #c5c6ce;
-    margin-bottom: 2rem; }
+    margin-top: 0.7rem; }
+  aside.new .line-separator {
+    border-top: 1px solid #5d5f79;
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
 
 /* Boxes */
 .grid-container .box {
@@ -77,6 +83,9 @@ aside.new {
   display: flex;
   align-items: center;
   column-gap: 25px; }
+  .grid-container .box a:hover {
+    color: #e9ab53;
+    cursor: pointer; }
   .grid-container .box img {
     width: 96px;
     height: 126px; }
