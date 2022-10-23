@@ -47,14 +47,18 @@ nav.main-nav {
       cursor: pointer; }
 
 nav.mobile-nav {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
-  background-color: #fffdfa;
-  font-size: 1.1rem;
-  width: 0%;
-  transition: 0.5s; }
+  background-color: rgba(0, 0, 0, 0.8); }
+  nav.mobile-nav .menu-list {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fffdfa;
+    font-size: 1.1rem; }
   nav.mobile-nav ul {
     list-style: none;
     padding: 50px; }

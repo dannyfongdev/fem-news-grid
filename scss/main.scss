@@ -43,18 +43,22 @@ nav.main-nav {
 }
 
 nav.mobile-nav {
-  // display: none;
+  // translucent black background
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
 
-  background-color: $neutral-color-1;
-  font-size: 1.1rem;
-
-  // app.js will slide this in by changing width and height
-  width: 0%;
-  transition: 0.5s;
+  // white background
+  .menu-list {
+    display:none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $neutral-color-1;
+    font-size: 1.1rem;
+  }
 
   ul {
     list-style: none;
