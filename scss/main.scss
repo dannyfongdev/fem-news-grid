@@ -13,6 +13,7 @@ nav.main-nav {
   img {
     width: 65px;
   }
+
   ul {
     display: flex;
     list-style: none;
@@ -34,17 +35,26 @@ nav.main-nav {
 /* Grid Layout */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat (3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    "feature feature new"
-    "feature feature new"
+    "feature-top-wide feature-top-wide new"
+    "feature-left feature-right new"
     "box-1 box-2 box-3";
   grid-gap: $grid-gap;
   max-width: $max-width;
   margin: auto;
 
-  .feature {
-    grid-area: feature;
+  .feature-top-wide {
+    grid-area: feature-top-wide;
+  }
+
+  .feature-left {
+    grid-area: feature-left;
+  }
+
+  .feature-right {
+    grid-area: feature-right;
   }
 
   .new {
@@ -66,46 +76,45 @@ nav.main-nav {
 
 // Feature
 
-.grid-container .feature {
-  margin-bottom: 42px;
+.grid-container {
 
-  .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: $grid-gap;
-  }
+  .feature-left,
+  .feature-right {
 
-  img {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: $neutral-color-4;
-    line-height: 1;
-  }
+    img {
+      width: 100%;
+      margin-bottom: 30px;
+    }
 
-  p {
-    margin-bottom: 2rem;
-  }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: $neutral-color-4;
+      line-height: 1;
+    }
 
-  a.btn {
-    display: inline-block;
-    background-color: $secondary-color;
-    color: $neutral-color-1;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-    font-size: 0.8rem;
-    font-weight: 700;
+    p {
+      margin-bottom: 2rem;
+    }
 
-    &:hover {
-      background-color: $neutral-color-4;
+    a.btn {
+      display: inline-block;
+      background-color: $secondary-color;
+      color: $neutral-color-1;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+
+      &:hover {
+        background-color: $neutral-color-4;
+      }
     }
   }
 }
+
 
 /* Aside: New */
 
@@ -176,12 +185,3 @@ aside.new {
   }
 }
 
-/* For Debugging */
-// .feature,
-// .new,
-// .box-1,
-// .box-2,
-// .box-3 {
-//   border: 1px #ccc solid;
-//   padding: 0.5rem;
-// }

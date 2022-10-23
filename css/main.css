@@ -41,13 +41,18 @@ nav.main-nav {
 /* Grid Layout */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat 3, 1fr;
-  grid-template-areas: "feature feature new" "feature feature new" "box-1 box-2 box-3";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "feature-top-wide feature-top-wide new" "feature-left feature-right new" "box-1 box-2 box-3";
   grid-gap: 30px;
   max-width: 1110px;
   margin: auto; }
-  .grid-container .feature {
-    grid-area: feature; }
+  .grid-container .feature-top-wide {
+    grid-area: feature-top-wide; }
+  .grid-container .feature-left {
+    grid-area: feature-left; }
+  .grid-container .feature-right {
+    grid-area: feature-right; }
   .grid-container .new {
     grid-area: new; }
   .grid-container .box-1 {
@@ -57,34 +62,36 @@ nav.main-nav {
   .grid-container .box-3 {
     grid-area: box-3; }
 
-.grid-container .feature {
-  margin-bottom: 42px; }
-  .grid-container .feature .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px; }
-  .grid-container .feature img {
-    width: 100%;
-    margin-bottom: 30px; }
-  .grid-container .feature h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #00001a;
-    line-height: 1; }
-  .grid-container .feature p {
-    margin-bottom: 2rem; }
-  .grid-container .feature a.btn {
-    display: inline-block;
-    background-color: #f15e50;
-    color: #fffdfa;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-    font-size: 0.8rem;
-    font-weight: 700; }
-    .grid-container .feature a.btn:hover {
-      background-color: #00001a; }
+.grid-container .feature-left img,
+.grid-container .feature-right img {
+  width: 100%;
+  margin-bottom: 30px; }
+
+.grid-container .feature-left h1,
+.grid-container .feature-right h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #00001a;
+  line-height: 1; }
+
+.grid-container .feature-left p,
+.grid-container .feature-right p {
+  margin-bottom: 2rem; }
+
+.grid-container .feature-left a.btn,
+.grid-container .feature-right a.btn {
+  display: inline-block;
+  background-color: #f15e50;
+  color: #fffdfa;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700; }
+  .grid-container .feature-left a.btn:hover,
+  .grid-container .feature-right a.btn:hover {
+    background-color: #00001a; }
 
 /* Aside: New */
 aside.new {
@@ -132,5 +139,3 @@ aside.new {
     font-size: 1.1rem;
     font-weight: 800;
     margin-bottom: 0.7rem; }
-
-/* For Debugging */
