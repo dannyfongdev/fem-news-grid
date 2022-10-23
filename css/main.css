@@ -51,6 +51,18 @@ p {
     line-height: 1; }
   .grid-container .feature p {
     margin-bottom: 2rem; }
+  .grid-container .feature a.btn {
+    display: inline-block;
+    background-color: #f15e50;
+    color: #fffdfa;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 700; }
+    .grid-container .feature a.btn:hover {
+      background-color: #00001a; }
 
 /* Aside: New */
 aside.new {
