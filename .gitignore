@@ -15,7 +15,6 @@
 .DS_Store
 .prettierignore
 
-design/
 assets/
 node_modules/
 package-lock.json
