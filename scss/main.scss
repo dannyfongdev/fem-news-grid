@@ -12,6 +12,10 @@ nav.main-nav {
 
   img {
     width: 65px;
+
+    &.mobile-menu-icon {
+      display: none;
+    }
   }
 
   ul {
@@ -164,7 +168,7 @@ nav.main-nav {
     align-items: center;
     justify-content: space-around;
     column-gap: 25px;
-    margin:0;
+    margin: 0;
 
     a:hover {
       color: $secondary-color;
@@ -189,7 +193,7 @@ nav.main-nav {
       margin-bottom: 0.7rem;
     }
 
-    & > div {
+    &>div {
       width: 100%;
     }
 
@@ -199,8 +203,18 @@ nav.main-nav {
 @media (max-width: 800px) {
 
 
-  nav.main-nav ul {
-    display: none;
+  nav.main-nav {
+    ul {
+      display: none;
+    }
+
+    img {
+      width: 65px;
+  
+      &.mobile-menu-icon {
+        display: block;
+      }
+    }
   }
 
   .grid-container {

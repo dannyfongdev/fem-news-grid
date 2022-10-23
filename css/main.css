@@ -26,6 +26,8 @@ nav.main-nav {
   justify-content: space-between; }
   nav.main-nav img {
     width: 65px; }
+    nav.main-nav img.mobile-menu-icon {
+      display: none; }
   nav.main-nav ul {
     display: flex;
     list-style: none; }
@@ -143,6 +145,10 @@ nav.main-nav {
 @media (max-width: 800px) {
   nav.main-nav ul {
     display: none; }
+  nav.main-nav img {
+    width: 65px; }
+    nav.main-nav img.mobile-menu-icon {
+      display: block; }
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
