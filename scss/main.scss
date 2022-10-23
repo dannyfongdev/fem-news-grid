@@ -9,6 +9,7 @@ nav.main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   img {
     width: 65px;
@@ -36,6 +37,38 @@ nav.main-nav {
     &:hover {
       color: $secondary-color;
       cursor: pointer;
+      // transition:0.5s;
+    }
+  }
+}
+
+nav.mobile-nav {
+  // display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+
+  background-color: $neutral-color-1;
+  font-size: 1.1rem;
+
+  // app.js will slide this in by changing width and height
+  width: 0%;
+  transition: 0.5s;
+
+  ul {
+    list-style: none;
+    padding: 50px;
+
+    li {
+      padding: 15px;
+
+      a {
+        &:hover {
+          color: $secondary-color;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
@@ -214,7 +247,7 @@ nav.main-nav {
 
     img {
       width: 65px;
-  
+
       &.mobile-menu-icon {
         display: block;
 

@@ -5,6 +5,9 @@
   margin: 0;
   padding: 0; }
 
+html {
+  overflow-x: hidden; }
+
 body {
   font-family: "Inter", sans-serif; }
 
@@ -23,7 +26,8 @@ nav.main-nav {
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative; }
   nav.main-nav img {
     width: 65px; }
     nav.main-nav img.mobile-menu-icon {
@@ -41,6 +45,24 @@ nav.main-nav {
     nav.main-nav a:hover {
       color: #f15e50;
       cursor: pointer; }
+
+nav.mobile-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #fffdfa;
+  font-size: 1.1rem;
+  width: 0%;
+  transition: 0.5s; }
+  nav.mobile-nav ul {
+    list-style: none;
+    padding: 50px; }
+    nav.mobile-nav ul li {
+      padding: 15px; }
+      nav.mobile-nav ul li a:hover {
+        color: #f15e50;
+        cursor: pointer; }
 
 /* Grid Layout */
 .grid-container {
