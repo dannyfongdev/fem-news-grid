@@ -16,6 +16,28 @@ p {
   line-height: 1.65;
   color: #5d5f79; }
 
+/* Nav Bar */
+nav.main-nav {
+  max-width: 1110px;
+  height: 140px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  nav.main-nav img {
+    width: 65px; }
+  nav.main-nav ul {
+    display: flex;
+    list-style: none; }
+  nav.main-nav a {
+    display: block;
+    margin-left: 40px;
+    font-size: 16px;
+    color: #5d5f79; }
+    nav.main-nav a:hover {
+      color: #f15e50;
+      cursor: pointer; }
+
 /* Grid Layout */
 .grid-container {
   display: grid;
@@ -96,7 +118,7 @@ aside.new {
   align-items: center;
   column-gap: 25px; }
   .grid-container .box a:hover {
-    color: #e9ab53;
+    color: #f15e50;
     cursor: pointer; }
   .grid-container .box img {
     width: 96px;

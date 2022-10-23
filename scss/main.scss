@@ -1,5 +1,36 @@
 @import "variables-base";
 
+/* Nav Bar */
+
+nav.main-nav {
+  max-width: $max-width;
+  height: 140px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    width: 65px;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    margin-left: 40px;
+    font-size: 16px;
+    color: $neutral-color-3;
+
+    &:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+}
+
 /* Grid Layout */
 .grid-container {
   display: grid;
@@ -122,7 +153,7 @@ aside.new {
   column-gap: 25px;
 
   a:hover {
-    color: $primary-color;
+    color: $secondary-color;
     cursor: pointer;
   }
 
