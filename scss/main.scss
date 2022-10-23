@@ -16,6 +16,10 @@ nav.main-nav {
     &.mobile-menu-icon {
       display: none;
     }
+
+    &.close-menu-icon {
+      display: none;
+    }
   }
 
   ul {
@@ -213,6 +217,18 @@ nav.main-nav {
   
       &.mobile-menu-icon {
         display: block;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &.close-menu-icon {
+        display: none;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
